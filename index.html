@@ -1,8 +1,22 @@
 <!DOCTYPE html>
 <html>
+    <head>
+        <link rel="stylesheet" href="css/style.css" type="text/css">
+    </head>
     <body>
-        <p style="font-weight: bolder; font-size: 30px;">
-            Typingspeed this is gaurav's branch
-        </p>
+        <div class="select">
+            <h1>Typing Speed Test</h1>
+            <div class="userinput">
+                <label for="level">Select Level &#8595;</label>
+                <select class="level" id="level" name="level">
+                    <option value="" >--Select an Option--</option>
+                    <option value="begineer">Begineer</option>
+                    <option value="intermediate">Intermediate</option>
+                    <option value="advanced">Advanced</option>
+                </select>
+                <input class="duration" type="number" placeholder="select duration (in minutes)">
+            </div>
+            <button class="button">Start</button>
+        </div>
     </body>
 </html>
