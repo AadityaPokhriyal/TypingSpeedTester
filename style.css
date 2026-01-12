@@ -1,0 +1,103 @@
+header,main,body,footer{  /*  isko maine space hatane ke liye lagaya header aur main ke beech. IDK if worked*/
+   margin: 0;
+   padding: 0;
+}
+
+
+header{
+
+     background-color: cadetblue;
+
+}
+
+#HeadingDiv{      /*this style is for the header div*/
+
+    text-align: center;
+    padding:20px;
+    padding-top: 10px;
+
+}
+
+#TSTheading{        /*this style is for the h1 inside header div*/
+    font-size: 100px;
+    font-family:'Times New Roman', Times, serif;
+}
+
+.HeadingAboutTime{       /*this style is for the heading for the minutes of typing*/
+
+    font-size: 50px;
+
+}
+
+.InfoAboutTime{      /*style for the paragraph inside the main's divs*/
+
+    font-size: 25px;
+
+}
+
+.ButtonAboutTime{  /*style for the button*/
+
+    height:50px;
+    width:200px;
+
+    margin-top: 20px;
+    margin-bottom: 50px;
+
+    font-size: large;
+    font-weight: bold;
+
+    border-radius: 25%;
+
+}
+
+.ButtonAboutTime:hover{
+
+    height:50px;
+    width:200px;
+
+    margin-top: 20px;
+    margin-bottom: 50px;
+
+    font-size: large;
+    font-weight: bold;
+
+    border-radius: 25%;
+    border: 4px solid grey;
+
+}
+
+.TimeDiv{
+
+    padding-left: 20px;
+    padding-top: 2px;
+
+}
+
+#TwoMinDiv{
+
+    background-color: cyan;
+
+}
+#FiveMinDiv{
+
+    background-color: pink;
+
+}
+#TenMinDiv{
+
+    background-color: blanchedalmond;
+
+}
+
+#FooterInfo{
+
+    padding:10px;
+    background-color: aliceblue;
+
+}
+
+footer{
+
+    text-align: center;
+
+}
