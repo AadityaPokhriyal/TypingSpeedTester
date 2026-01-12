@@ -29,11 +29,11 @@ body{
 .level:hover{
     box-shadow: 1px 1px 5px black;
 }
-.duration{
+.Duration{
     background-color: whitesmoke;
     height: 25px;
 }
-.duration:hover{
+.Duration:hover{
     box-shadow: 1px 1px 5px black;
 }
 .button{
