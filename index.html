@@ -1,31 +1,66 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Typing Speed</title> 
-        <link rel="stylesheet" href="css/style.css" type="text/css">
-    </head>
-    <body>
-        <div class="select">
-            <h1>Typing Speed Test</h1>
-            <div class="userinput">
-                <label for="level">Test Text &#8595;</label>
-                <select class="level" id="level" name="level">
-                    <option value="" >--Select an Option--</option>
-                    <option value="begineer">Story 1</option>
-                    <option value="intermediate">Story 2</option>
-                    <option value="advanced">Story 3</option>
-                </select>
-                <label for="Duration">Duration &#8595;</label>
-                <select class="Duration" id="Duration" name="Duration">
-                    <option value="" >Select duration</option>
-                    <option value="2 min">2 min</option>
-                    <option value="5 min">5 min</option>
-                    <option value="10 min">10 min</option>
-                </select>
-            </div>
-            <a href="testpage.html"><button class="button">Start</button></a>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typing Speed</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header> <!-- header contains all the heading stuff -->
+
+        <div id="HeadingDiv"> <!-- This div is for the heading -->
+
+            <h1 id="TSTheading">Typing Speed Tester</h1>
+
         </div>
-    </body>
+
+    </header>
+
+
+    <main> <!-- main contains all the main stuff -->
+
+        <div id="TwoMinDiv" class="TimeDiv"> <!-- div made for the two minute testing -->
+
+            <h2 class="HeadingAboutTime">Test speed for 2 minutes:</h2>
+
+            <p class="InfoAboutTime">For a faster and quick analysis of typing speed.</p>
+
+            <button id="two" class="ButtonAboutTime">Lets go!</button>
+
+        </div>
+
+        <div id="FiveMinDiv" class="TimeDiv"> <!-- div made for the five minute testing -->
+
+            <h2 class="HeadingAboutTime">Test speed for 5 minutes:</h2>
+
+            <p class="InfoAboutTime">For a more accurate analysis of typing speed.</p>
+
+            <button id="five" class="ButtonAboutTime">Lets go!</button>
+
+        </div>
+        
+        <div id="TenMinDiv" class="TimeDiv"> <!-- div made for the ten minute testing -->
+
+            <h2 class="HeadingAboutTime">Test speed for 10 minutes:</h2>
+
+            <p class="InfoAboutTime">For a slower and steady analysis of typing speed.</p>
+
+            <button id="ten" class="ButtonAboutTime">Lets go!</button>
+
+        </div>
+
+    </main>
+
+
+    <footer> <!--for acknowledgement-->
+
+        <h4 id="FooterInfo">Made by Aaditya Pokhriyal and Gaurav Verma.</h4>
+
+    </footer>
+
+</body>
 </html>
