@@ -1,5 +1,12 @@
-let para="Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia enim nulla, consectetur quaerat odit inventore. Quo id aut voluptas voluptates dicta nesciunt ipsum libero veritatis culpa! Inventore doloribus neque ipsam!Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia enim nulla, consectetur quaerat odit inventore. Quo id aut voluptas voluptates dicta nesciunt ipsum libero veritatis culpa! Inventore doloribus neque ipsam!Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia enim nulla, consectetur quaerat odit inventore. Quo id aut voluptas voluptates dicta nesciunt ipsum libero veritatis culpa! Inventore doloribus neque ipsam!Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia enim nulla, consectetur quaerat odit inventore. Quo id aut voluptas voluptates dicta nesciunt ipsum libero veritatis culpa! Inventore doloribus neque ipsam!Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia enim nulla, consectetur quaerat odit inventore. Quo id aut voluptas voluptates dicta nesciunt ipsum libero veritatis culpa! Inventore doloribus neque ipsam!Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia enim nulla, consectetur quaerat odit inventore. Quo id aut voluptas voluptates dicta nesciunt ipsum libero veritatis culpa! Inventore doloribus neque ipsam!";
-let para_div=document.querySelector("#typingPara");
+let para_array,para_div,random_index,P;
+
+//a json file is really useful for example for a huge amount of data in this case it is fetched exactly as we fetch APIs
+
+async function fetch_array(){
+let promise=await fetch("para.json");
+para_array = await promise.json();
+para_div=document.querySelector("#typingPara");
+random_index=Math.floor((Math.random())*10);
 
 const styles_of_para={
     fontFamily: "Courier New",
@@ -8,7 +15,7 @@ const styles_of_para={
     color: "grey",
 };
 
-for(let chr of para){
+for(let chr of para_array[random_index]){
     let new_obj=document.createElement("p");
     new_obj.style.display="inline";
     Object.assign(new_obj.style,styles_of_para);
@@ -16,7 +23,11 @@ for(let chr of para){
     para_div.append(new_obj);
     
 }
-let P=para_div.firstElementChild;
+
+P=para_div.firstElementChild;
+
+}
+fetch_array();
 
 // "rgb(236, 70, 70)" for wrong.
 // "lightgreen" for right.
