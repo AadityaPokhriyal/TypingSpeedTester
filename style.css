@@ -1,12 +1,16 @@
 header,main,body,footer{  /*  isko maine space hatane ke liye lagaya header aur main ke beech. IDK if worked*/
    margin: 0;
    padding: 0;
+
+   border-top: 1px solid black;
 }
 
 
 header{
 
      background-color: cadetblue;
+
+     border-bottom: 1px solid black;
 
 }
 
@@ -25,7 +29,8 @@ header{
 
 .HeadingAboutTime{       /*this style is for the heading for the minutes of typing*/
 
-    font-size: 50px;
+    font-size: 60px;
+    font-weight: bold;
 
 }
 
@@ -33,36 +38,43 @@ header{
 
     font-size: 25px;
 
+    /* padding-top: 50px;
+    padding-bottom: 30px; */
+
+    /* margin-top:60px */
+
 }
 
 .ButtonAboutTime{  /*style for the button*/
 
-    height:50px;
+    height:150px;
     width:200px;
-
-    margin-top: 20px;
-    margin-bottom: 50px;
 
     font-size: large;
     font-weight: bold;
 
     border-radius: 25%;
 
+    margin-left: 75%;
+    margin-bottom: 40px;
+    margin-top: 0px;
+
 }
 
 .ButtonAboutTime:hover{
 
-    height:50px;
+    height:150px;
     width:200px;
-
-    margin-top: 20px;
-    margin-bottom: 50px;
 
     font-size: large;
     font-weight: bold;
 
     border-radius: 25%;
     border: 4px solid grey;
+
+    margin-left: 75%;
+    margin-bottom: 40px;
+    margin-top: 0px;
 
 }
 
@@ -71,6 +83,8 @@ header{
     padding-left: 20px;
     padding-top: 2px;
 
+    border-bottom: 1px solid black;
+
 }
 
 #TwoMinDiv{
@@ -78,6 +92,11 @@ header{
     background-color: cyan;
 
 }
+
+.DivForHeadingAndButton{
+    padding-top: 10px;
+}
+
 #FiveMinDiv{
 
     background-color: pink;

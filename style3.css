@@ -1,0 +1,44 @@
+body{
+
+    background-color:coral ;
+
+}
+header{
+
+    background-color:coral;
+
+    text-align: center;
+
+    height: 25vh;
+
+    padding-top: 10px;
+    padding-bottom:85px;
+
+}
+
+main{
+    background-color: white;
+
+    height: 50vh;
+
+    padding-top: 55px;
+
+}
+
+#heading{
+
+    font-size: 100px;
+    font-family: 'Times New Roman', Times, serif;
+
+}
+
+.score{
+
+    font-size: xxx-large;
+    font-weight: medium;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+
+    margin-left: 20px;
+    margin-bottom: 20px;
+
+}

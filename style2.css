@@ -1,0 +1,56 @@
+main{
+    display: flex;
+    height: 95vh;  /* i needed to set fixed height of main instead of the div as i am scrolling the div inside the main. */
+}
+
+body{
+    overflow:hidden;
+    padding-top: 10px;
+}
+
+#TimerAndInfo{
+
+    flex:0.2;
+
+    background-color: burlywood;
+
+    text-align: center;
+
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    border-left: 2px solid black;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+
+}
+
+#time{
+    font-size: 40px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    padding-inline: 10px;
+}
+
+#typingPara{
+
+    overflow-y: auto;
+
+    flex:0.8;
+
+    background-color: lightyellow;
+
+    border-left: 2px solid black;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    border-right: 2px solid black;
+
+    padding-left: 20px;
+
+    min-height: 0;
+    
+}
+
+#typingPara::-webkit-scrollbar { /* pretty good i asked from chatgpt */
+    display: none;
+}
