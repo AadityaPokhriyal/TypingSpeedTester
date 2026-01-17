@@ -3,7 +3,7 @@ body{
     background-color:coral ;
 
 }
-header{
+header{ /* style for the header */
 
     background-color:coral;
 
@@ -17,6 +17,7 @@ header{
 }
 
 main{
+
     background-color: white;
 
     height: 50vh;
@@ -25,14 +26,14 @@ main{
 
 }
 
-#heading{
+#heading{ /*  style for heading div inside the header */
 
     font-size: 100px;
     font-family: 'Times New Roman', Times, serif;
 
 }
 
-.score{
+.score{ /* style for all the div containing scores */
 
     font-size: xxx-large;
     font-weight: medium;

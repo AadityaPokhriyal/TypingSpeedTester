@@ -5,10 +5,13 @@ header,main,body,footer{  /*  isko maine space hatane ke liye lagaya header aur 
    border-top: 1px solid black;
 }
 
+body{
+    background-color: brown;
+}
 
 header{
 
-     background-color: cadetblue;
+     background-color:coral;
 
      border-bottom: 1px solid black;
 
@@ -61,7 +64,7 @@ header{
 
 }
 
-.ButtonAboutTime:hover{
+.ButtonAboutTime:hover{ /* Button when hovered */
 
     height:150px;
     width:200px;
@@ -78,7 +81,7 @@ header{
 
 }
 
-.TimeDiv{
+.TimeDiv{   /* all the three divs that contains a button and info about time */
 
     padding-left: 20px;
     padding-top: 2px;
@@ -89,34 +92,39 @@ header{
 
 #TwoMinDiv{
 
-    background-color: cyan;
+    background-color:gold;
 
 }
 
 .DivForHeadingAndButton{
+
     padding-top: 10px;
+    
 }
 
 #FiveMinDiv{
 
-    background-color: pink;
+    background-color:whitesmoke;
 
 }
 #TenMinDiv{
 
-    background-color: blanchedalmond;
+    background-color:cadetblue ;
 
 }
 
 #FooterInfo{
 
     padding:10px;
-    background-color: aliceblue;
+
+    background-color: brown;
 
 }
 
 footer{
 
     text-align: center;
+
+    background-color: brown;
 
 }

@@ -4,6 +4,8 @@ let spm=document.querySelector("#spm");
 let correct_percent=document.querySelector("#correct");
 let incorrect_percent=document.querySelector("#incorrect");
 
+//here i took all the info from the local storage then calculated it and shown in the div's innerText.
+
 if(wpm){
     let time=Number(localStorage.getItem("timer"))*60-Number(localStorage.getItem("time_left"));
     let correct_letters=Number(localStorage.getItem("right"));
