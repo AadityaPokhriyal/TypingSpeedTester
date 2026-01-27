@@ -103,11 +103,23 @@ document.addEventListener("keypress",(event)=>{
 document.addEventListener("keydown",(eventDown)=>{ //keydown event listener specifically for backspace
 
         if(eventDown.key==="Backspace" && P!==para_div.firstElementChild){
+            
+            P.scrollIntoView( 
+            {
+                block:"start",
+                behavior:"smooth"
+            }
+           );
+
 
             P=P.previousElementSibling;
 
-            if(P.style.backgroundColor==="lightgreen") right--;
-            else wrong--;
+            if(P.style.backgroundColor==="lightgreen") {
+                localStorage.setItem("right",--right);
+            }
+            else {
+                localStorage.setItem("wrong",--wrong);
+            }
 
             P.style.backgroundColor="lightyellow";
 
