@@ -108,5 +108,14 @@ async function elapseSecond(time,s){ //timer made using recursion
     
 }
 
+// async function elapseSecond(time,s){ //timer using setInterval
+//     let intervalID=setInterval(async ()=>{ 
+//         if(time===0) clearInterval(intervalID); 
+//         await decrement(s).then((newS)=>{
+//             s=newS;
+//         });
+//         time--;
+//         },1000);
+//     }
 
 

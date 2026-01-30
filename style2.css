@@ -51,6 +51,6 @@ body{ /* hidden the scrolling of body */
     
 }
 
-#typingPara::-webkit-scrollbar { /* pretty good i asked from chatgpt, removes the scrollbar only for chrome*/
+#typingPara::-webkit-scrollbar{ /* pretty good i asked from chatgpt, removes the scrollbar only for chrome*/
     display: none;
 }
