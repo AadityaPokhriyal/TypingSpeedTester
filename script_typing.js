@@ -2,7 +2,7 @@ let para_array,para_div,random_index,P;
 
 //a json file is really useful for example for a huge amount of data in this case it is fetched exactly as we fetch APIs
 
-async function fetch_array(){ //for fetching json file
+(async function fetch_array(){ //for fetching json file
 
 let promise=await fetch("para.json");
 
@@ -32,11 +32,16 @@ for(let chr of para_array[random_index]){  //this creates a p tag for each chara
 
 P=para_div.firstElementChild; //starting iterator and this iterates to the end child node just like iterating through a linked list
 
-}
+})();
 
 // I kept all these inside the function because they should only be executed when the array of paragraphs is fully loaded 
 
-fetch_array();
+
+
+const timerAndInfo = document.querySelector('#TimerAndInfo');
+if (timerAndInfo) {
+    timerAndInfo.focus();
+}
 
 // "rgb(236, 70, 70)" for wrong.
 // "lightgreen" for right.
@@ -121,7 +126,7 @@ document.addEventListener("keydown",(eventDown)=>{ //keydown event listener spec
                 localStorage.setItem("wrong",--wrong);
             }
 
-            P.style.backgroundColor="lightyellow";
+            P.style.backgroundColor="rgba(255, 255, 255, 0.08)";
 
             presses++;
             localStorage.setItem("presses",presses);

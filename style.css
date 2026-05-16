@@ -1,130 +1,127 @@
-header,main,body,footer{  /*  isko maine space hatane ke liye lagaya header aur main ke beech. IDK if worked*/
-   margin: 0;
-   padding: 0;
-
-   border-top: 1px solid black;
+* {
+    box-sizing: border-box;
 }
 
-body{
-    background-color: brown;
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: radial-gradient(circle at top left, #02111f, #050814 45%, #000000 100%);
+    color: #e9f9e6;
+    min-height: 100vh;
 }
 
-header{
-
-     background-color:coral;
-
-     border-bottom: 1px solid black;
-
-}
-
-#HeadingDiv{      /*this style is for the header div*/
-
+header {
     text-align: center;
-    padding:20px;
-    padding-top: 10px;
-
+    padding: 2rem 1rem 1rem;
+    background: rgba(12, 24, 44, 0.95);
+    border-bottom: 2px solid rgba(50, 255, 83, 0.35);
+    box-shadow: 0 14px 40px rgba(0, 0, 0, 0.25);
 }
 
-#TSTheading{        /*this style is for the h1 inside header div*/
-    font-size: 100px;
-    font-family:'Times New Roman', Times, serif;
+#TSTheading {
+    margin: 0;
+    font-size: clamp(3rem, 5vw, 5rem);
+    letter-spacing: -0.05em;
+    text-transform: uppercase;
+    font-family: 'Segoe UI', Times, serif;
 }
 
-.HeadingAboutTime{       /*this style is for the heading for the minutes of typing*/
-
-    font-size: 60px;
-    font-weight: bold;
-
+main {
+    width: min(1100px, calc(100% - 2rem));
+    margin: 1.5rem auto 2rem;
+    display: grid;
+    gap: 1.25rem;
 }
 
-.InfoAboutTime{      /*style for the paragraph inside the main's divs*/
-
-    font-size: 25px;
-
-    /* padding-top: 50px;
-    padding-bottom: 30px; */
-
-    /* margin-top:60px */
-
+.TimeDiv {
+    display: grid;
+    gap: 1rem;
+    padding: 1.5rem;
+    border-radius: 24px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.25);
+    transition: transform 0.2s ease, border-color 0.2s ease;
 }
 
-.ButtonAboutTime{  /*style for the button*/
-
-    height:150px;
-    width:200px;
-
-    font-size: large;
-    font-weight: bold;
-
-    border-radius: 25%;
-
-    margin-left: 75%;
-    margin-bottom: 40px;
-    margin-top: 0px;
-
+.TimeDiv:hover {
+    transform: translateY(-3px);
+    border-color: rgba(50, 255, 83, 0.45);
 }
 
-.ButtonAboutTime:hover{ /* Button when hovered */
-
-    height:150px;
-    width:200px;
-
-    font-size: large;
-    font-weight: bold;
-
-    border-radius: 25%;
-    border: 4px solid grey;
-
-    margin-left: 75%;
-    margin-bottom: 40px;
-    margin-top: 0px;
-
+.HeadingAboutTime {
+    margin: 0;
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+    font-weight: 700;
+    color: #b2ffb3;
 }
 
-.TimeDiv{   /* all the three divs that contains a button and info about time */
-
-    padding-left: 20px;
-    padding-top: 2px;
-
-    border-bottom: 1px solid black;
-
+.InfoAboutTime {
+    margin: 0;
+    font-size: clamp(1rem, 2vw, 1.15rem);
+    line-height: 1.6;
+    color: #d5f5d5;
 }
 
-#TwoMinDiv{
-
-    background-color:gold;
-
+.DivForHeadingAndButton {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
 }
 
-.DivForHeadingAndButton{
-
-    padding-top: 10px;
-    
+.ButtonAboutTime {
+    min-width: 180px;
+    padding: 1.1rem 1.4rem;
+    font-size: 1.05rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 18px;
+    cursor: pointer;
+    background: linear-gradient(135deg, #1e5f35, #2f8c52);
+    color: #f4ffe2;
+    box-shadow: 0 12px 25px rgba(20, 80, 40, 0.3);
+    transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
 }
 
-#FiveMinDiv{
-
-    background-color:whitesmoke;
-
-}
-#TenMinDiv{
-
-    background-color:cadetblue ;
-
+.ButtonAboutTime:hover,
+.ButtonAboutTime:focus-visible {
+    transform: translateY(-2px);
+    outline: none;
+    box-shadow: 0 18px 28px rgba(30, 120, 70, 0.35);
+    background: linear-gradient(135deg, #2b9643, #4fca68);
 }
 
-#FooterInfo{
-
-    padding:10px;
-
-    background-color: brown;
-
+.ButtonAboutTime:active {
+    transform: translateY(0);
 }
 
-footer{
+#TwoMinDiv,
+#FiveMinDiv,
+#TenMinDiv {
+    color: #d9fdce;
+}
 
+footer {
     text-align: center;
+    padding: 1rem 0 2rem;
+    color: rgba(255, 255, 255, 0.7);
+}
 
-    background-color: brown;
+#FooterInfo {
+    margin: 0;
+    font-size: 0.95rem;
+}
 
+@media (max-width: 720px) {
+    .DivForHeadingAndButton {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .ButtonAboutTime {
+        width: 100%;
+        text-align: center;
+    }
 }

@@ -1,45 +1,62 @@
-body{
-
-    background-color:coral ;
-
-}
-header{ /* style for the header */
-
-    background-color:coral;
-
-    text-align: center;
-
-    height: 25vh;
-
-    padding-top: 10px;
-    padding-bottom:85px;
-
+* {
+    box-sizing: border-box;
 }
 
-main{
-
-    background-color: white;
-
-    height: 50vh;
-
-    padding-top: 55px;
-
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(160deg, #1a2139 0%, #142238 45%, #0b151f 100%);
+    color: #eef6ff;
 }
 
-#heading{ /*  style for heading div inside the header */
+header {
+    display: grid;
+    place-items: center;
+    padding: 3rem 1rem 1.5rem;
+    background: rgba(30, 42, 69, 0.95);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    box-shadow: 0 24px 45px rgba(0, 0, 0, 0.35);
+}
 
-    font-size: 100px;
+#heading {
+    margin: 0;
+    font-size: clamp(3rem, 6vw, 5rem);
+    letter-spacing: -0.05em;
     font-family: 'Times New Roman', Times, serif;
-
 }
 
-.score{ /* style for all the div containing scores */
+main {
+    max-width: 950px;
+    margin: 0 auto 2rem;
+    padding: 2rem 1.5rem;
+    display: grid;
+    gap: 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 28px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.2);
+}
 
-    font-size: xxx-large;
-    font-weight: medium;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+.score {
+    font-size: clamp(2.1rem, 3vw, 3rem);
+    font-weight: 600;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+    padding: 1rem 1.25rem;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    color: #eef7ff;
+}
 
-    margin-left: 20px;
-    margin-bottom: 20px;
+@media (max-width: 700px) {
+    header {
+        padding: 2rem 1rem 1rem;
+    }
 
+    .score {
+        font-size: 2rem;
+        padding: 0.95rem 1rem;
+    }
 }

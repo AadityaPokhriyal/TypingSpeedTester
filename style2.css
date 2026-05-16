@@ -1,56 +1,98 @@
-main{
-    display: flex;
-    height: 95vh;  /* i needed to set fixed height of main instead of the div as i am scrolling the div inside the main. */
+* {
+    box-sizing: border-box;
 }
 
-body{ /* hidden the scrolling of body */
-    overflow:hidden;
-    padding-top: 10px;
-}
-
-#TimerAndInfo{ /* style for the LHS div that contains the div for the timer */
-
-    flex:0.2;
-
-    background-color: burlywood;
-
-    text-align: center;
-
-    padding-top: 30px;
-    padding-bottom: 30px;
-
-    border-left: 2px solid black;
-    border-top: 2px solid black;
-    border-bottom: 2px solid black;
-
-}
-
-#time{ /* style for the div that contains time text like 10:00 */
-    font-size: 40px;
+body {
+    margin: 0;
+    min-height: 100vh;
+    overflow: hidden;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-weight: bold;
-    padding-inline: 10px;
+    background: radial-gradient(circle at top center, #101d3c, #050b19 65%);
+    color: #f7fbff;
 }
 
-#typingPara{ /* style for div that contains numerous small paragraphs 1 letter each */
+main {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 1rem;
+    min-height: 100vh;
+    padding: 1rem;
+    height:95vh;
+}
 
-    overflow-y: auto;
+#TimerAndInfo {
+    display: grid;
+    place-items: start center;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 24px;
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
+    padding: 2rem 1.5rem;
+    min-height: 180px;
+}
 
-    flex:0.8;
+#TimerAndInfo:focus {
+    outline: 3px solid rgba(70, 142, 212, 0.7);
+    outline-offset: 4px;
+}
 
-    background-color: lightyellow;
+#time {
+    position:fixed;
+    top: 3rem;
+    margin: 0;
+    font-size: clamp(2.75rem, 7vw, 4rem);
+    font-weight: 800;
+    text-align: center;
+    color: #d4f5ff;
+    text-shadow: 0 2px 18px rgba(72, 221, 255, 0.3);
+}
 
-    border-left: 2px solid black;
-    border-top: 2px solid black;
-    border-bottom: 2px solid black;
-    border-right: 2px solid black;
-
-    padding-left: 20px;
-
+#typingPara {
+    overflow-y:auto;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 24px;
+    padding: 1.75rem;
+    line-height: 1.8;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.03);
+    color: #f9fcff;
     min-height: 0;
-    
 }
 
-#typingPara::-webkit-scrollbar{ /* pretty good i asked from chatgpt, removes the scrollbar only for chrome*/
+#typingPara:focus {
+    outline: 3px solid rgba(70, 142, 212, 0.7);
+    outline-offset: 4px;
+}
+
+#typingPara p {
+    margin: 0 0 1rem;
+    font-size: clamp(1rem, 1.2vw, 1.2rem);
+}
+
+#typingPara::-webkit-scrollbar {
     display: none;
+}
+
+#typingPara::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+#typingPara::-webkit-scrollbar-thumb {
+    background: rgba(70, 142, 212, 0.7);
+    border-radius: 999px;
+}
+
+#typingPara::-webkit-scrollbar-thumb:hover {
+    background: rgba(101, 180, 255, 0.85);
+}
+
+@media (max-width: 900px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+
+    #TimerAndInfo,
+    #typingPara {
+        min-height: auto;
+    }
 }
